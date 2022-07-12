@@ -156,7 +156,7 @@ Insert::
                                                     Loop,
                                                     {
                                                         ;OKボタンのサーチ
-                                                        ImageSearch, ox, oy, 878, 876, 1117, 946, *100 ok.bmp
+                                                        ImageSearch, ox, oy, 878, 876, 1117, 946, *80 ok.bmp
                                                         If (ErrorLevel = 0)
                                                         {
                                                             Click, %ox%, %oy%, 0
@@ -671,7 +671,7 @@ Home::
                                                     Loop,
                                                     {
                                                         ;OKボタンのサーチ
-                                                        ImageSearch, ox, oy, 878, 876, 1117, 946, *100 ok.bmp
+                                                        ImageSearch, ox, oy, 878, 876, 1117, 946, *80 ok.bmp
                                                         If (ErrorLevel = 0)
                                                         {
                                                             Click, %ox%, %oy%, 0
@@ -998,7 +998,7 @@ End::
                                                                     Loop,
                                                                     {
                                                                         ;OKボタンのサーチ
-                                                                        ImageSearch, ox, oy, 878, 876, 1117, 946, *100 ok.bmp
+                                                                        ImageSearch, ox, oy, 878, 876, 1117, 946, *80 ok.bmp
                                                                         If (ErrorLevel = 0)
                                                                         {
                                                                             Click, %ox%, %oy%, 0
