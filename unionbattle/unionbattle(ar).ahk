@@ -30,14 +30,14 @@ Insert::
     If (GetKeyState("vk1D", "P"))
     {
         ;参戦確認のはいボタンのサーチ
-        ImageSearch, sx, sy, 727, 787, 917, 857, *20 start.bmp
+        ImageSearch, sx, sy, 727, 787, 917, 857, *100 start.bmp
         If (ErrorLevel = 0)
         {
             Click, %sx%, %sy%
             Loop, 
             {
                 ;全祈りボタンのサーチ
-                ImageSearch, apx, apy, 1513, 788, 1651, 861, *30 allprayer.bmp
+                ImageSearch, apx, apy, 1513, 788, 1651, 861, *100 allprayer.bmp
                 If (ErrorLevel = 0)
                 {
                     Click, %apx%, %apy%, 0
@@ -58,25 +58,25 @@ Insert::
             Loop, 
             {
                 ;ホームボタンのサーチ
-                ImageSearch, hx, hy, 231, 1049, 333, 1149, *20 home.bmp
+                ImageSearch, hx, hy, 231, 1049, 333, 1149, *100 home.bmp
                 If (ErrorLevel = 0)
                 {
                     ;ホームボタン1.2秒長押し後、幻獣級バナーへカーソル移動
-                    Sleep, 100
+                    Sleep, 200
                     Click, %hx%, %hy%, D
                     Sleep, 1200
                     Click, 1188, 285, 0
                     Loop, 
                     {
                         ;幻獣級バナーのサーチ
-                        ImageSearch, gx, gy, 1158, 270, 1352, 331, *50 genju.bmp
+                        ImageSearch, gx, gy, 1158, 270, 1352, 331, *100 genju.bmp
                         If (ErrorLevel = 0)
                         {
                             Click, %gx%, %gy%
                             Loop, 
                             {
                                 ;進軍するボタンのサーチ
-                                ImageSearch, sx, sy, 1595, 890, 1813, 960, *20 shingun.bmp
+                                ImageSearch, sx, sy, 1595, 890, 1813, 960, *100 shingun.bmp
                                 If (ErrorLevel = 0)
                                 {
                                     Click, %sx%, %sy%, 0
@@ -84,21 +84,21 @@ Insert::
                                     Loop, 
                                     {
                                         ;クエスト開始チェックのための左上の青い玉サーチ
-                                        ImageSearch, , , 48, 73, 100, 115, *20 wave.bmp
+                                        ImageSearch, , , 48, 73, 100, 115, *100 wave.bmp
                                         If (ErrorLevel = 0)
                                         {
                                             Loop, 
                                             {
                                                 ;オートオフボタンのサーチ
                                                 ;オートオフの場合、オートノーマルに変更
-                                                ImageSearch, aux, auy, 42, 1011, 174, 1123, *20 auto.bmp
+                                                ImageSearch, aux, auy, 42, 1011, 174, 1123, *100 auto.bmp
                                                 If (ErrorLevel = 0)
                                                 {
                                                     Click, %aux%, %auy%
                                                     Loop, 
                                                     {
                                                         ;オートノーマルボタンのサーチ
-                                                        ImageSearch, anx, any, 35, 744, 166, 879, *20 autono.bmp
+                                                        ImageSearch, anx, any, 35, 744, 166, 879, *100 autono.bmp
                                                         If (ErrorLevel = 0)
                                                         {
                                                             Click, %anx%, %any%
@@ -112,7 +112,7 @@ Insert::
                                                     Loop, 
                                                     {
                                                         ;オートノーマルボタンのサーチ
-                                                        ImageSearch, , , 42, 1011, 174, 1123, *60 autono.bmp
+                                                        ImageSearch, , , 42, 1011, 174, 1123, *100 autono.bmp
                                                         If (ErrorLevel = 0)
                                                         {
                                                             break
@@ -123,14 +123,14 @@ Insert::
                                                             Loop, 
                                                             {
                                                                 ;オートスキルボタンのサーチ
-                                                                ImageSearch, asx, asy, 42, 1011, 174, 1123, *60 autosk.bmp
+                                                                ImageSearch, asx, asy, 42, 1011, 174, 1123, *100 autosk.bmp
                                                                 If (ErrorLevel = 0)
                                                                 {
                                                                     Click, %asx%, %asy%, 2
                                                                     Loop, 
                                                                     {
                                                                         ;オートノーマルボタンのサーチ
-                                                                        ImageSearch, anx, any, 35, 744, 166, 879, *20 autono.bmp
+                                                                        ImageSearch, anx, any, 35, 744, 166, 879, *100 autono.bmp
                                                                         If (ErrorLevel = 0)
                                                                         {
                                                                             Click, %anx%, %any%
@@ -151,7 +151,7 @@ Insert::
                                             Loop, 
                                             {
                                                 ;通常攻撃アイコンのサーチ
-                                                ImageSearch, , , 1424, 968, 1632, 1157, *30 attack.bmp
+                                                ImageSearch, , , 1424, 968, 1632, 1157, *100 attack.bmp
                                                 If (ErrorLevel = 0)
                                                 {
                                                     ;マルコFS1
@@ -161,28 +161,28 @@ Insert::
                                                     Loop, 
                                                     {
                                                         ;オートオフボタンのサーチ
-                                                        ImageSearch, aux, auy, 42, 1011, 174, 1123, *20 auto.bmp
+                                                        ImageSearch, aux, auy, 42, 1011, 174, 1123, *100 auto.bmp
                                                         If (ErrorLevel = 0)
                                                         {
                                                             Click, %aux%, %auy%
                                                             Loop, 
                                                             {
                                                                 ;オートスキルボタンのサーチ
-                                                                ImageSearch, asx, asy, 26, 864, 175, 998, *20 autosk.bmp
+                                                                ImageSearch, asx, asy, 26, 864, 175, 998, *100 autosk.bmp
                                                                 If (ErrorLevel = 0)
                                                                 {
                                                                     Click, %asx%, %asy%
                                                                     Loop, 
                                                                     {
                                                                         ;QUEST CLEARのRの文字のサーチ
-                                                                        ImageSearch, , , 1586, 451, 1606, 534, *40 clear.bmp
+                                                                        ImageSearch, , , 1586, 451, 1606, 534, *100 clear.bmp
                                                                         If (ErrorLevel = 0)
                                                                         {
                                                                             Sleep, 2000
                                                                             Loop,
                                                                             {
                                                                                 ;OKボタンのサーチ
-                                                                                ImageSearch, ox, oy, 878, 876, 1117, 946, *20 ok.bmp
+                                                                                ImageSearch, ox, oy, 878, 876, 1117, 946, *100 ok.bmp
                                                                                 If (ErrorLevel = 0)
                                                                                 {
                                                                                     Click, %ox%, %oy%, 0
@@ -190,7 +190,7 @@ Insert::
                                                                                     Loop, 
                                                                                     {
                                                                                         ;ユニオンボタンのサーチ
-                                                                                        ImageSearch, qx, qy, 1431, 1048, 1527, 1140, *50 union.bmp
+                                                                                        ImageSearch, qx, qy, 1431, 1048, 1527, 1140, *100 union.bmp
                                                                                         If (ErrorLevel = 0)
                                                                                         {
                                                                                             Click, %qx%, %qy%, 0
@@ -198,7 +198,7 @@ Insert::
                                                                                             Loop, 
                                                                                             {
                                                                                                 ;自ユニオンのサーチ
-                                                                                                ImageSearch, mx, my, 213, 808, 295, 866, *30 myunion.bmp
+                                                                                                ImageSearch, mx, my, 213, 808, 295, 866, *100 myunion.bmp
                                                                                                 If (ErrorLevel = 0)
                                                                                                 {
                                                                                                     Click, %mx%, %my%, 0
@@ -209,7 +209,7 @@ Insert::
                                                                                                         Loop, 
                                                                                                         {
                                                                                                             ;全祈りボタンのサーチ
-                                                                                                            ImageSearch, apx, apy, 1513, 788, 1651, 861, *30 allprayer.bmp
+                                                                                                            ImageSearch, apx, apy, 1513, 788, 1651, 861, *100 allprayer.bmp
                                                                                                             If (ErrorLevel = 0)
                                                                                                             {
                                                                                                                 Click, %apx%, %apy%, 0
@@ -218,10 +218,10 @@ Insert::
                                                                                                                 Loop, 
                                                                                                                 {
                                                                                                                     ;エールボタンのサーチ
-                                                                                                                    ImageSearch, yx, yy, 359, 790, 545, 855, *30 yell.bmp
+                                                                                                                    ImageSearch, yx, yy, 359, 790, 545, 855, *100 yell.bmp
                                                                                                                     If (ErrorLevel = 0)
                                                                                                                     {
-                                                                                                                        Sleep, 100
+                                                                                                                        Sleep, 200
                                                                                                                         Click, %yx%, %yy%, 0
                                                                                                                         Click, %yx%, %yy%
                                                                                                                         Sleep, 300
@@ -237,7 +237,7 @@ Insert::
                                                                                                         Loop, 
                                                                                                         {
                                                                                                             ;エールボタンのサーチ
-                                                                                                            ImageSearch, yx, yy, 359, 790, 545, 855, *30 yell.bmp
+                                                                                                            ImageSearch, yx, yy, 359, 790, 545, 855, *100 yell.bmp
                                                                                                             If (ErrorLevel = 0)
                                                                                                             {
                                                                                                                 Click, %yx%, %yy%, 0
@@ -246,20 +246,20 @@ Insert::
                                                                                                                 Loop, 
                                                                                                                 {
                                                                                                                     ;全祈りボタンのサーチ
-                                                                                                                    ImageSearch, apx, apy, 1513, 788, 1651, 861, *30 allprayer.bmp
+                                                                                                                    ImageSearch, apx, apy, 1513, 788, 1651, 861, *100 allprayer.bmp
                                                                                                                     If (ErrorLevel = 0)
                                                                                                                     {
-                                                                                                                        Sleep, 100
+                                                                                                                        Sleep, 200
                                                                                                                         Click, %apx%, %apy%, 0
                                                                                                                         Click, %apx%, %apy%
                                                                                                                         Sleep, 500
                                                                                                                         Loop, 
                                                                                                                         {
                                                                                                                             ;エールボタンのサーチ
-                                                                                                                            ImageSearch, yx, yy, 359, 790, 545, 855, *30 yell.bmp
+                                                                                                                            ImageSearch, yx, yy, 359, 790, 545, 855, *100 yell.bmp
                                                                                                                             If (ErrorLevel = 0)
                                                                                                                             {
-                                                                                                                                Sleep, 100
+                                                                                                                                Sleep, 200
                                                                                                                                 Click, %yx%, %yy%, 0
                                                                                                                                 Click, %yx%, %yy%
                                                                                                                                 Sleep, 300
@@ -277,7 +277,7 @@ Insert::
                                                                                                         Loop, 
                                                                                                         {
                                                                                                             ;全祈りボタンのサーチ
-                                                                                                            ImageSearch, apx, apy, 1513, 788, 1651, 861, *30 allprayer.bmp
+                                                                                                            ImageSearch, apx, apy, 1513, 788, 1651, 861, *100 allprayer.bmp
                                                                                                             If (ErrorLevel = 0)
                                                                                                             {
                                                                                                                 Click, %apx%, %apy%, 0
@@ -286,23 +286,23 @@ Insert::
                                                                                                                 Loop, 
                                                                                                                 {
                                                                                                                     ;ホームボタンのサーチ
-                                                                                                                    ImageSearch, hx, hy, 231, 1049, 333, 1149, *20 home.bmp
+                                                                                                                    ImageSearch, hx, hy, 231, 1049, 333, 1149, *100 home.bmp
                                                                                                                     If (ErrorLevel = 0)
                                                                                                                     {
-                                                                                                                        Sleep, 100
+                                                                                                                        Sleep, 200
                                                                                                                         click, %hx%, %hy%, 0
                                                                                                                         Click, %hx%, %hy%
                                                                                                                         Loop, 
                                                                                                                         {
                                                                                                                             ;メインクエストボタンのサーチ
-                                                                                                                            ImageSearch, max, may, 1732, 801, 1904, 950, *20 mainquest.bmp
+                                                                                                                            ImageSearch, max, may, 1732, 801, 1904, 950, *100 mainquest.bmp
                                                                                                                             If (ErrorLevel = 0)
                                                                                                                             {
                                                                                                                                 Click, %max%, %may%
                                                                                                                                 Loop, 
                                                                                                                                 {
                                                                                                                                     ;該当クエストのサーチ
-                                                                                                                                    ImageSearch, qx, qy, 1304, 618, 1726, 713, *20 quest.bmp
+                                                                                                                                    ImageSearch, qx, qy, 1304, 618, 1726, 713, *100 quest.bmp
                                                                                                                                     If (ErrorLevel = 0)
                                                                                                                                     {
                                                                                                                                         Click, %qx%, %qy%
@@ -310,14 +310,14 @@ Insert::
                                                                                                                                         Loop, 
                                                                                                                                         {
                                                                                                                                             ;該当クエストのバナーのQuest部分のサーチ
-                                                                                                                                            ImageSearch, q5x, q5y, 1066, 314, 1293, 388, *50 genju.bmp
+                                                                                                                                            ImageSearch, q5x, q5y, 1066, 314, 1293, 388, *100 genju.bmp
                                                                                                                                             If (ErrorLevel = 0)
                                                                                                                                             {
                                                                                                                                                 Click, %q5x%, %q5y%
                                                                                                                                                 Loop, 
                                                                                                                                                 {
                                                                                                                                                     ;編成の右矢印マークのサーチ
-                                                                                                                                                    ImageSearch, chx, chy, 1718, 492, 1850, 715, *20 change.bmp
+                                                                                                                                                    ImageSearch, chx, chy, 1718, 492, 1850, 715, *100 change.bmp
                                                                                                                                                     If (ErrorLevel = 0)
                                                                                                                                                     {
                                                                                                                                                         Click, %chx%, %chy%, 0
@@ -325,7 +325,7 @@ Insert::
                                                                                                                                                         Loop, 
                                                                                                                                                         {
                                                                                                                                                             ;進軍するボタンのサーチ
-                                                                                                                                                            ImageSearch, sx, sy, 1577, 847, 1841, 948, *30 shingun.bmp
+                                                                                                                                                            ImageSearch, sx, sy, 1577, 847, 1841, 948, *100 shingun.bmp
                                                                                                                                                             If (ErrorLevel = 0)
                                                                                                                                                             {
                                                                                                                                                                 Click, %sx%, %sy%, 0
@@ -333,21 +333,21 @@ Insert::
                                                                                                                                                                 Loop, 
                                                                                                                                                                 {
                                                                                                                                                                     ;クエスト開始チェックのための左上の青い玉サーチ
-                                                                                                                                                                    ImageSearch, , , 48, 73, 100, 115, *20 wave.bmp
+                                                                                                                                                                    ImageSearch, , , 48, 73, 100, 115, *100 wave.bmp
                                                                                                                                                                     If (ErrorLevel = 0)
                                                                                                                                                                     {
                                                                                                                                                                         Loop, 
                                                                                                                                                                         {
                                                                                                                                                                             ;オートオフボタンのサーチ
                                                                                                                                                                             ;オートオフの場合、オートスキルに変更
-                                                                                                                                                                            ImageSearch, aux, auy, 42, 1011, 174, 1123, *20 auto.bmp
+                                                                                                                                                                            ImageSearch, aux, auy, 42, 1011, 174, 1123, *100 auto.bmp
                                                                                                                                                                             If (ErrorLevel = 0)
                                                                                                                                                                             {
                                                                                                                                                                                 Click, %aux%, %auy%
                                                                                                                                                                                 Loop, 
                                                                                                                                                                                 {
                                                                                                                                                                                     ;オートスキルボタンのサーチ
-                                                                                                                                                                                    ImageSearch, asx, asy, 26, 864, 175, 998, *20 autosk.bmp
+                                                                                                                                                                                    ImageSearch, asx, asy, 26, 864, 175, 998, *100 autosk.bmp
                                                                                                                                                                                     If (ErrorLevel = 0)
                                                                                                                                                                                     {
                                                                                                                                                                                         Click, %asx%, %asy%
@@ -361,14 +361,14 @@ Insert::
                                                                                                                                                                                 Loop, 
                                                                                                                                                                                 {
                                                                                                                                                                                     ;オートノーマルボタンのサーチ
-                                                                                                                                                                                    ImageSearch, anx, any, 42, 1011, 174, 1123, *60 autono.bmp
+                                                                                                                                                                                    ImageSearch, anx, any, 42, 1011, 174, 1123, *100 autono.bmp
                                                                                                                                                                                     If (ErrorLevel = 0)
                                                                                                                                                                                     {
                                                                                                                                                                                         Click, %anx%, %any%, 2
                                                                                                                                                                                         Loop, 
                                                                                                                                                                                         {
                                                                                                                                                                                             ;オートスキルボタンのサーチ
-                                                                                                                                                                                            ImageSearch, asx, asy, 26, 864, 175, 998, *20 autosk.bmp
+                                                                                                                                                                                            ImageSearch, asx, asy, 26, 864, 175, 998, *100 autosk.bmp
                                                                                                                                                                                             If (ErrorLevel = 0)
                                                                                                                                                                                             {
                                                                                                                                                                                                 Click, %asx%, %asy%
@@ -382,7 +382,7 @@ Insert::
                                                                                                                                                                                         Loop, 
                                                                                                                                                                                         {
                                                                                                                                                                                             ;オートスキルボタンのサーチ
-                                                                                                                                                                                            ImageSearch, , , 42, 1011, 174, 1123, *60 autosk.bmp
+                                                                                                                                                                                            ImageSearch, , , 42, 1011, 174, 1123, *100 autosk.bmp
                                                                                                                                                                                             If (ErrorLevel = 0)
                                                                                                                                                                                             {
                                                                                                                                                                                                 break
@@ -398,14 +398,14 @@ Insert::
                                                                                                                                                                         Loop, 
                                                                                                                                                                         {
                                                                                                                                                                             ;QUEST CLEARのRの文字のサーチ
-                                                                                                                                                                            ImageSearch, , , 1586, 451, 1606, 534, *40 clear.bmp
+                                                                                                                                                                            ImageSearch, , , 1586, 451, 1606, 534, *100 clear.bmp
                                                                                                                                                                             If (ErrorLevel = 0)
                                                                                                                                                                             {
                                                                                                                                                                                 Sleep, 3500
                                                                                                                                                                                 Loop,
                                                                                                                                                                                 {
                                                                                                                                                                                     ;OKボタンのサーチ
-                                                                                                                                                                                    ImageSearch, ox, oy, 878, 876, 1117, 946, *20 ok.bmp
+                                                                                                                                                                                    ImageSearch, ox, oy, 878, 876, 1117, 946, *100 ok.bmp
                                                                                                                                                                                     If (ErrorLevel = 0)
                                                                                                                                                                                     {
                                                                                                                                                                                         Click, %ox%, %oy%, 0
@@ -413,7 +413,7 @@ Insert::
                                                                                                                                                                                         Loop, 
                                                                                                                                                                                         {
                                                                                                                                                                                             ;ユニオンボタンのサーチ
-                                                                                                                                                                                            ImageSearch, qx, qy, 1431, 1048, 1527, 1140, *50 union.bmp
+                                                                                                                                                                                            ImageSearch, qx, qy, 1431, 1048, 1527, 1140, *100 union.bmp
                                                                                                                                                                                             If (ErrorLevel = 0)
                                                                                                                                                                                             {
                                                                                                                                                                                                 Sleep, 1500
@@ -422,7 +422,7 @@ Insert::
                                                                                                                                                                                                 Loop, 
                                                                                                                                                                                                 {
                                                                                                                                                                                                     ;自ユニオンのサーチ
-                                                                                                                                                                                                    ImageSearch, mx, my, 213, 808, 295, 866, *30 myunion.bmp
+                                                                                                                                                                                                    ImageSearch, mx, my, 213, 808, 295, 866, *100 myunion.bmp
                                                                                                                                                                                                     If (ErrorLevel = 0)
                                                                                                                                                                                                     {
                                                                                                                                                                                                         Click, %mx%, %my%, 0
@@ -430,7 +430,7 @@ Insert::
                                                                                                                                                                                                         Loop, 
                                                                                                                                                                                                         {
                                                                                                                                                                                                             ;全祈りボタンのサーチ
-                                                                                                                                                                                                            ImageSearch, apx, apy, 1513, 788, 1651, 861, *30 allprayer.bmp
+                                                                                                                                                                                                            ImageSearch, apx, apy, 1513, 788, 1651, 861, *100 allprayer.bmp
                                                                                                                                                                                                             If (ErrorLevel = 0)
                                                                                                                                                                                                             {
                                                                                                                                                                                                                 Click, %apx%, %apy%, 0
@@ -439,10 +439,10 @@ Insert::
                                                                                                                                                                                                                 Loop, 
                                                                                                                                                                                                                 {
                                                                                                                                                                                                                     ;エールボタンのサーチ
-                                                                                                                                                                                                                    ImageSearch, yx, yy, 359, 790, 545, 855, *30 yell.bmp
+                                                                                                                                                                                                                    ImageSearch, yx, yy, 359, 790, 545, 855, *100 yell.bmp
                                                                                                                                                                                                                     If (ErrorLevel = 0)
                                                                                                                                                                                                                     {
-                                                                                                                                                                                                                        Sleep, 100
+                                                                                                                                                                                                                        Sleep, 200
                                                                                                                                                                                                                         Click, %yx%, %yy%, 0
                                                                                                                                                                                                                         Click, %yx%, %yy%
                                                                                                                                                                                                                         Sleep, 300
@@ -500,7 +500,7 @@ Insert::
                                                                                                         Loop, 
                                                                                                         {
                                                                                                             ;全エールボタンのサーチ
-                                                                                                            ImageSearch, ayx, ayy, 667, 787, 836, 866, allyell.bmp
+                                                                                                            ImageSearch, ayx, ayy, 667, 787, 836, 866, *100 allyell.bmp
                                                                                                             If (ErrorLevel = 0)
                                                                                                             {
                                                                                                                 Click, %ayx%, %ayy%, 0
@@ -516,7 +516,7 @@ Insert::
                                                                                                         Loop, 
                                                                                                         {
                                                                                                             ;全祈りボタンのサーチ
-                                                                                                            ImageSearch, apx, apy, 1513, 788, 1651, 861, *30 allprayer.bmp
+                                                                                                            ImageSearch, apx, apy, 1513, 788, 1651, 861, *100 allprayer.bmp
                                                                                                             If (ErrorLevel = 0)
                                                                                                             {
                                                                                                                 Click, %apx%, %apy%, 0
@@ -578,14 +578,14 @@ Home::
     If (GetKeyState("vk1D", "P"))
     {
         ;参戦確認のはいボタンのサーチ
-        ImageSearch, sx, sy, 727, 787, 917, 857, *20 start.bmp
+        ImageSearch, sx, sy, 727, 787, 917, 857, *100 start.bmp
         If (ErrorLevel = 0)
         {
             Click, %sx%, %sy%
             Loop, 
             {
                 ;全エールボタンのサーチ
-                ImageSearch, ayx, ayy, 667, 787, 836, 866, allyell.bmp
+                ImageSearch, ayx, ayy, 667, 787, 836, 866, *100 allyell.bmp
                 If (ErrorLevel = 0)
                 {
                     Click, %ayx%, %ayy%, 0
@@ -605,25 +605,25 @@ Home::
             Loop, 
             {
                 ;ホームボタンのサーチ
-                ImageSearch, hx, hy, 231, 1049, 333, 1149, *20 home.bmp
+                ImageSearch, hx, hy, 231, 1049, 333, 1149, *100 home.bmp
                 If (ErrorLevel = 0)
                 {
                     ;ホームボタン1.2秒長押し後、幻獣級バナーへカーソル移動
-                    Sleep, 100
+                    Sleep, 200
                     Click, %hx%, %hy%, D
                     Sleep, 1200
                     Click, 1188, 285, 0
                     Loop, 
                     {
                         ;幻獣級バナーのサーチ
-                        ImageSearch, gx, gy, 1158, 270, 1352, 331, *50 genju.bmp
+                        ImageSearch, gx, gy, 1158, 270, 1352, 331, *100 genju.bmp
                         If (ErrorLevel = 0)
                         {
                             Click, %gx%, %gy%
                             Loop, 
                             {
                                 ;進軍するボタンのサーチ
-                                ImageSearch, sx, sy, 1595, 890, 1813, 960, *20 shingun.bmp
+                                ImageSearch, sx, sy, 1595, 890, 1813, 960, *100 shingun.bmp
                                 If (ErrorLevel = 0)
                                 {
                                     Click, %sx%, %sy%, 0
@@ -631,21 +631,21 @@ Home::
                                     Loop, 
                                     {
                                         ;クエスト開始チェックのための左上の青い玉サーチ
-                                        ImageSearch, , , 48, 73, 100, 115, *20 wave.bmp
+                                        ImageSearch, , , 48, 73, 100, 115, *100 wave.bmp
                                         If (ErrorLevel = 0)
                                         {
                                             Loop, 
                                             {
                                                 ;オートオフボタンのサーチ
                                                 ;オートオフの場合、オートノーマルに変更
-                                                ImageSearch, aux, auy, 42, 1011, 174, 1123, *20 auto.bmp
+                                                ImageSearch, aux, auy, 42, 1011, 174, 1123, *100 auto.bmp
                                                 If (ErrorLevel = 0)
                                                 {
                                                     Click, %aux%, %auy%
                                                     Loop, 
                                                     {
                                                         ;オートノーマルボタンのサーチ
-                                                        ImageSearch, anx, any, 35, 744, 166, 879, *20 autono.bmp
+                                                        ImageSearch, anx, any, 35, 744, 166, 879, *100 autono.bmp
                                                         If (ErrorLevel = 0)
                                                         {
                                                             Click, %anx%, %any%
@@ -659,7 +659,7 @@ Home::
                                                     Loop, 
                                                     {
                                                         ;オートノーマルボタンのサーチ
-                                                        ImageSearch, , , 42, 1011, 174, 1123, *60 autono.bmp
+                                                        ImageSearch, , , 42, 1011, 174, 1123, *100 autono.bmp
                                                         If (ErrorLevel = 0)
                                                         {
                                                             break
@@ -670,14 +670,14 @@ Home::
                                                             Loop, 
                                                             {
                                                                 ;オートスキルボタンのサーチ
-                                                                ImageSearch, asx, asy, 42, 1011, 174, 1123, *60 autosk.bmp
+                                                                ImageSearch, asx, asy, 42, 1011, 174, 1123, *100 autosk.bmp
                                                                 If (ErrorLevel = 0)
                                                                 {
                                                                     Click, %asx%, %asy%, 2
                                                                     Loop, 
                                                                     {
                                                                         ;オートノーマルボタンのサーチ
-                                                                        ImageSearch, anx, any, 35, 744, 166, 879, *20 autono.bmp
+                                                                        ImageSearch, anx, any, 35, 744, 166, 879, *100 autono.bmp
                                                                         If (ErrorLevel = 0)
                                                                         {
                                                                             Click, %anx%, %any%
@@ -698,7 +698,7 @@ Home::
                                             Loop, 
                                             {
                                                 ;通常攻撃アイコンのサーチ
-                                                ImageSearch, , , 1424, 968, 1632, 1157, *30 attack.bmp
+                                                ImageSearch, , , 1424, 968, 1632, 1157, *100 attack.bmp
                                                 If (ErrorLevel = 0)
                                                 {
                                                     ;マルコFS1
@@ -708,28 +708,28 @@ Home::
                                                     Loop, 
                                                     {
                                                         ;オートオフボタンのサーチ
-                                                        ImageSearch, aux, auy, 42, 1011, 174, 1123, *20 auto.bmp
+                                                        ImageSearch, aux, auy, 42, 1011, 174, 1123, *100 auto.bmp
                                                         If (ErrorLevel = 0)
                                                         {
                                                             Click, %aux%, %auy%
                                                             Loop, 
                                                             {
                                                                 ;オートスキルボタンのサーチ
-                                                                ImageSearch, asx, asy, 26, 864, 175, 998, *20 autosk.bmp
+                                                                ImageSearch, asx, asy, 26, 864, 175, 998, *100 autosk.bmp
                                                                 If (ErrorLevel = 0)
                                                                 {
                                                                     Click, %asx%, %asy%
                                                                     Loop, 
                                                                     {
                                                                         ;QUEST CLEARのRの文字のサーチ
-                                                                        ImageSearch, , , 1586, 451, 1606, 534, *40 clear.bmp
+                                                                        ImageSearch, , , 1586, 451, 1606, 534, *100 clear.bmp
                                                                         If (ErrorLevel = 0)
                                                                         {
                                                                             Sleep, 2000
                                                                             Loop,
                                                                             {
                                                                                 ;OKボタンのサーチ
-                                                                                ImageSearch, ox, oy, 878, 876, 1117, 946, *20 ok.bmp
+                                                                                ImageSearch, ox, oy, 878, 876, 1117, 946, *100 ok.bmp
                                                                                 If (ErrorLevel = 0)
                                                                                 {
                                                                                     Click, %ox%, %oy%, 0
@@ -737,7 +737,7 @@ Home::
                                                                                     Loop, 
                                                                                     {
                                                                                         ;ユニオンボタンのサーチ
-                                                                                        ImageSearch, qx, qy, 1431, 1048, 1527, 1140, *50 union.bmp
+                                                                                        ImageSearch, qx, qy, 1431, 1048, 1527, 1140, *100 union.bmp
                                                                                         If (ErrorLevel = 0)
                                                                                         {
                                                                                             Sleep, 400
@@ -746,7 +746,7 @@ Home::
                                                                                             Loop, 
                                                                                             {
                                                                                                 ;自ユニオンのサーチ
-                                                                                                ImageSearch, mx, my, 213, 808, 295, 866, *30 myunion.bmp
+                                                                                                ImageSearch, mx, my, 213, 808, 295, 866, *100 myunion.bmp
                                                                                                 If (ErrorLevel = 0)
                                                                                                 {
                                                                                                     Click, %mx%, %my%, 0
@@ -754,7 +754,7 @@ Home::
                                                                                                     Loop, 
                                                                                                     {
                                                                                                         ;全エールボタンのサーチ
-                                                                                                        ImageSearch, ayx, ayy, 667, 787, 836, 866, allyell.bmp
+                                                                                                        ImageSearch, ayx, ayy, 667, 787, 836, 866, *100 allyell.bmp
                                                                                                         If (ErrorLevel = 0)
                                                                                                         {
                                                                                                             Click, %ayx%, %ayy%, 0
@@ -862,27 +862,27 @@ F8::
 Return
 ;無変換+kで交易選択→12体選択→送り出すをクリック
 vk1D & k::
-    ImageSearch, ux, uy, 430, 1078, 614, 1160, unit.bmp
+    ImageSearch, ux, uy, 430, 1078, 614, 1160, *100 unit.bmp
     If (ErrorLevel = 0)
     {
         Click, %ux%, %uy%
         Loop, 
         {
-            ImageSearch, kx, ky, 1498, 109, 1802, 243, koueki.bmp
+            ImageSearch, kx, ky, 1498, 109, 1802, 243, *100 koueki.bmp
             If (ErrorLevel = 0)
             {
                 Click, %kx%, %ky%
                 Loop, 
                 {
-                    ImageSearch, ox, oy, 1271, 347, 1604, 469, okuridasu.bmp
+                    ImageSearch, ox, oy, 1271, 347, 1604, 469, *100 okuridasu.bmp
                     If (ErrorLevel = 0)
                     {
-                        Sleep, 100
+                        Sleep, 300
                         Click, %ox%, %oy%
                         Sleep, 1000
                         Loop, 
                         {
-                            ImageSearch, , , 1572, 172, 1773, 237, nyuushujun.bmp
+                            ImageSearch, , , 1572, 172, 1773, 237, *100 nyuushujun.bmp
                             If (ErrorLevel = 0)
                             {
                                 Click, 888, 383
@@ -905,7 +905,7 @@ vk1D & k::
                                 Click, 1666, 212
                                 Loop, 
                                 {
-                                    ImageSearch, nx, ny, 1401, 512, 1622, 605, nyuushu.bmp
+                                    ImageSearch, nx, ny, 1401, 512, 1622, 605, *100 nyuushu.bmp
                                     If (ErrorLevel = 0)
                                     {
                                         Click, %nx%, %ny%
@@ -944,7 +944,7 @@ End::
     Loop, 
     {
         ;ホームボタンのサーチ
-        ImageSearch, hx, hy, 231, 1049, 333, 1149, *20 home.bmp
+        ImageSearch, hx, hy, 231, 1049, 333, 1149, *100 home.bmp
         If (ErrorLevel = 0)
         {
             click, %hx%, %hy%, 0
@@ -952,14 +952,14 @@ End::
             Loop, 
             {
                 ;メインクエストボタンのサーチ
-                ImageSearch, max, may, 1732, 801, 1904, 950, *20 mainquest.bmp
+                ImageSearch, max, may, 1732, 801, 1904, 950, *100 mainquest.bmp
                 If (ErrorLevel = 0)
                 {
                     Click, %max%, %may%
                     Loop, 
                     {
                         ;該当クエストのサーチ
-                        ImageSearch, qx, qy, 1304, 618, 1726, 713, *20 quest.bmp
+                        ImageSearch, qx, qy, 1304, 618, 1726, 713, *100 quest.bmp
                         If (ErrorLevel = 0)
                         {
                             Click, %qx%, %qy%
@@ -967,14 +967,14 @@ End::
                             Loop, 
                             {
                                 ;該当クエストのバナーのQuest部分のサーチ
-                                ImageSearch, q5x, q5y, 1066, 314, 1293, 388, *50 genju.bmp
+                                ImageSearch, q5x, q5y, 1066, 314, 1293, 388, *100 genju.bmp
                                 If (ErrorLevel = 0)
                                 {
                                     Click, %q5x%, %q5y%
                                     Loop, 
                                     {
                                         ;編成の右矢印マークのサーチ
-                                        ImageSearch, chx, chy, 1718, 492, 1850, 715, *20 change.bmp
+                                        ImageSearch, chx, chy, 1718, 492, 1850, 715, *100 change.bmp
                                         If (ErrorLevel = 0)
                                         {
                                             Click, %chx%, %chy%, 0
@@ -982,7 +982,7 @@ End::
                                             Loop, 
                                             {
                                                 ;進軍するボタンのサーチ
-                                                ImageSearch, sx, sy, 1577, 847, 1841, 948, *30 shingun.bmp
+                                                ImageSearch, sx, sy, 1577, 847, 1841, 948, *100 shingun.bmp
                                                 If (ErrorLevel = 0)
                                                 {
                                                     Click, %sx%, %sy%, 0
@@ -990,21 +990,21 @@ End::
                                                     Loop, 
                                                     {
                                                         ;クエスト開始チェックのための左上の青い玉サーチ
-                                                        ImageSearch, , , 48, 73, 100, 115, *20 wave.bmp
+                                                        ImageSearch, , , 48, 73, 100, 115, *100 wave.bmp
                                                         If (ErrorLevel = 0)
                                                         {
                                                             Loop, 
                                                             {
                                                                 ;オートオフボタンのサーチ
                                                                 ;オートオフの場合、オートスキルに変更
-                                                                ImageSearch, aux, auy, 42, 1011, 174, 1123, *20 auto.bmp
+                                                                ImageSearch, aux, auy, 42, 1011, 174, 1123, *100 auto.bmp
                                                                 If (ErrorLevel = 0)
                                                                 {
                                                                     Click, %aux%, %auy%
                                                                     Loop, 
                                                                     {
                                                                         ;オートスキルボタンのサーチ
-                                                                        ImageSearch, asx, asy, 26, 864, 175, 998, *20 autosk.bmp
+                                                                        ImageSearch, asx, asy, 26, 864, 175, 998, *100 autosk.bmp
                                                                         If (ErrorLevel = 0)
                                                                         {
                                                                             Click, %asx%, %asy%
@@ -1018,14 +1018,14 @@ End::
                                                                     Loop, 
                                                                     {
                                                                         ;オートノーマルボタンのサーチ
-                                                                        ImageSearch, anx, any, 42, 1011, 174, 1123, *60 autono.bmp
+                                                                        ImageSearch, anx, any, 42, 1011, 174, 1123, *100 autono.bmp
                                                                         If (ErrorLevel = 0)
                                                                         {
                                                                             Click, %anx%, %any%, 2
                                                                             Loop, 
                                                                             {
                                                                                 ;オートスキルボタンのサーチ
-                                                                                ImageSearch, asx, asy, 26, 864, 175, 998, *20 autosk.bmp
+                                                                                ImageSearch, asx, asy, 26, 864, 175, 998, *100 autosk.bmp
                                                                                 If (ErrorLevel = 0)
                                                                                 {
                                                                                     Click, %asx%, %asy%
@@ -1039,7 +1039,7 @@ End::
                                                                             Loop, 
                                                                             {
                                                                                 ;オートスキルボタンのサーチ
-                                                                                ImageSearch, , , 42, 1011, 174, 1123, *60 autosk.bmp
+                                                                                ImageSearch, , , 42, 1011, 174, 1123, *100 autosk.bmp
                                                                                 If (ErrorLevel = 0)
                                                                                 {
                                                                                     break
@@ -1055,14 +1055,14 @@ End::
                                                             Loop, 
                                                             {
                                                                 ;QUEST CLEARのRの文字のサーチ
-                                                                ImageSearch, , , 1586, 451, 1606, 534, *40 clear.bmp
+                                                                ImageSearch, , , 1586, 451, 1606, 534, *100 clear.bmp
                                                                 If (ErrorLevel = 0)
                                                                 {
                                                                     Sleep, 3500
                                                                     Loop,
                                                                     {
                                                                         ;OKボタンのサーチ
-                                                                        ImageSearch, ox, oy, 878, 876, 1117, 946, *20 ok.bmp
+                                                                        ImageSearch, ox, oy, 878, 876, 1117, 946, *100 ok.bmp
                                                                         If (ErrorLevel = 0)
                                                                         {
                                                                             Click, %ox%, %oy%, 0
@@ -1070,7 +1070,7 @@ End::
                                                                             Loop, 
                                                                             {
                                                                                 ;ユニオンボタンのサーチ
-                                                                                ImageSearch, qx, qy, 1431, 1048, 1527, 1140, *50 union.bmp
+                                                                                ImageSearch, qx, qy, 1431, 1048, 1527, 1140, *100 union.bmp
                                                                                 If (ErrorLevel = 0)
                                                                                 {
                                                                                     Sleep, 1500
@@ -1079,7 +1079,7 @@ End::
                                                                                     Loop, 
                                                                                     {
                                                                                         ;自ユニオンのサーチ
-                                                                                        ImageSearch, mx, my, 213, 808, 295, 866, *30 myunion.bmp
+                                                                                        ImageSearch, mx, my, 213, 808, 295, 866, *100 myunion.bmp
                                                                                         If (ErrorLevel = 0)
                                                                                         {
                                                                                             Click, %mx%, %my%, 0
@@ -1087,7 +1087,7 @@ End::
                                                                                             Loop, 
                                                                                             {
                                                                                                 ;全祈りボタンのサーチ
-                                                                                                ImageSearch, apx, apy, 1513, 788, 1651, 861, *30 allprayer.bmp
+                                                                                                ImageSearch, apx, apy, 1513, 788, 1651, 861, *100 allprayer.bmp
                                                                                                 If (ErrorLevel = 0)
                                                                                                 {
                                                                                                     Click, %apx%, %apy%, 0
@@ -1096,10 +1096,10 @@ End::
                                                                                                     Loop, 
                                                                                                     {
                                                                                                         ;エールボタンのサーチ
-                                                                                                        ImageSearch, yx, yy, 359, 790, 545, 855, *30 yell.bmp
+                                                                                                        ImageSearch, yx, yy, 359, 790, 545, 855, *100 yell.bmp
                                                                                                         If (ErrorLevel = 0)
                                                                                                         {
-                                                                                                            Sleep, 100
+                                                                                                            Sleep, 200
                                                                                                             Click, %yx%, %yy%, 0
                                                                                                             Click, %yx%, %yy%
                                                                                                             Sleep, 300
