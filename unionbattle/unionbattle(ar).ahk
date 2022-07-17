@@ -558,7 +558,7 @@ Insert::
                                 ;フレ選択がされていない場合の対策
                                 Else
                                 {
-                                    Sleep, 10
+                                    Sleep, 50
                                     Click, %gx%, %gy%
                                 }
                             }break
@@ -795,7 +795,7 @@ Home::
                                 ;フレ選択がされていない場合の対策
                                 Else
                                 {
-                                    Sleep, 10
+                                    Sleep, 50
                                     Click, %gx%, %gy%
                                 }
                             }break
